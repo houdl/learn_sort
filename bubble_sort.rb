@@ -1,11 +1,12 @@
 def bubble_sort1(arr)
-  arr.each_index do |i|
-    (1..(arr.size - i - 1)).each do |j|
-      if(arr[j - 1] > arr[j])
-        arr[j-1], arr[j] = arr[j], arr[j-1]
+  1.upto(arr.length-1) do |i|
+    (arr.length-i).times do |j|
+      if(arr[j] > arr[j+1])
+        arr[j], arr[j+1] = arr[j+1], arr[j]
       end
     end
   end
+  arr
 end
 
 def bubble_sort2(arr)
